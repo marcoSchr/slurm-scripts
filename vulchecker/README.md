@@ -3,6 +3,7 @@
 ## Requirements
 
 - [LLVM](../llvm)
+- [ninja](../ninja)
 - Python 3.9
 
 ## Reproduction
