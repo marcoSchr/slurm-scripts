@@ -22,8 +22,8 @@ git clone https://github.com/michaelbrownuc/llap.git
 cp -R llap/src/* llvm-project/llvm/lib/Transforms/
 cd llvm-project/
 /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./llvm/ -B llvm-build -DCMAKE_BUILD_TYPE=Release
-make -C llvm-build -j 16
-make -C llvm-build install
+cmake --build llvm-build -j 40
+cmake --install llvm-build --prefix /ukp-storage-1/schroeder_e/llvm/
 LLVM_DIR=/ukp-storage-1/schroeder_e/llvm/llvm-project/llvm-build/lib/cmake/llvm/ /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./clang/ -B clang-build -DCMAKE_BUILD_TYPE=Release
-make -C clang-build -j 16
-make -C clang-build install
+cmake --build clang-build -j 40
+cmake --install clang-build --prefix /ukp-storage-1/schroeder_e/llvm/
