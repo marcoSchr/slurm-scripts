@@ -58,11 +58,15 @@ pip install flawfinder
 pip install -r requirements.txt
 # Install torch_scatter as binary package, because we have no gcc7 to build it
 pip install https://data.pyg.org/whl/torch-1.9.0%2Bcu102/torch_scatter-2.0.9-cp37-cp37m-linux_x86_64.whl
+pip install torch==1.9.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu102
 pip install dgl-cu102 -f https://data.dgl.ai/wheels/repo.html
 pip install --global-option=build_ext \
             --global-option="-I/ukp-storage-1/schroeder_e/graphviz/usr/include/" \
             --global-option="-L/ukp-storage-1/schroeder_e/graphviz/usr/lib/" \
             pygraphviz==1.7
 pip install nltk
+# Install specific version of ray, as current version is not compatible with linevd
+pip install ray[tune]==1.6.0
+pip install ray[default]==1.6.0
 python -c 'import nltk; nltk.download("punkt")'
 cd ..
