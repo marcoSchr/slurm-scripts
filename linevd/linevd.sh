@@ -20,6 +20,7 @@ cd /ukp-storage-1/schroeder_e/linevd
 # Download sources
 git clone https://github.com/davidhin/linevd.git
 git clone https://github.com/stanfordnlp/GloVe.git
+wget https://github.com/ShiftLeftSecurity/joern/releases/latest/download/joern-install.sh
 curl -L https://github.com/danmar/cppcheck/archive/refs/tags/2.5.tar.gz > cppcheck/cppcheck2.5.tar.gz
 curl -L https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/rough-auditing-tool-for-security/rats-2.4.tgz > rats-2.4.tgz
 
@@ -45,7 +46,9 @@ make
 cd ..
 
 
-# TODO: install joern
+# Install joern
+
+printf 'Y\n/ukp-storage-1/schroeder_e/joern\nN\n\nN\n\n' | ./joern-install.sh --interactive
 
 
 # Install python dependencies
