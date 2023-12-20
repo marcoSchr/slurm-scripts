@@ -11,6 +11,7 @@
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
+export HOME=/ukp-storage-1/schroeder_e/
 mkdir -p /ukp-storage-1/schroeder_e/VulChecker/
 /ukp-storage-1/schroeder_e/python3.8/Python-3.8.18/python -m venv /ukp-storage-1/schroeder_e/VulChecker/venv
 source /ukp-storage-1/schroeder_e/VulChecker/venv/bin/activate
