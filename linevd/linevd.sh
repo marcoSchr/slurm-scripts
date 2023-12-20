@@ -11,6 +11,7 @@
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
+export HOME=/ukp-storage-1/schroeder_e/
 mkdir -p /ukp-storage-1/schroeder_e/linevd/
 /ukp-storage-1/schroeder_e/python3.7/Python-3.7.17/python -m venv /ukp-storage-1/schroeder_e/linevd/venv
 source /ukp-storage-1/schroeder_e/linevd/venv/bin/activate
