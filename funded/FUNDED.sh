@@ -22,6 +22,9 @@ pip install -r requirements.txt
 pip install nni
 cd /ukp-storage-1/schroeder_e/FUNDED
 pip install gdown
-gdowm https://drive.google.com/file/d/1yIH7-O5qNuGdWWw4gDCCtehqST3ofY6r
-gdown https://drive.google.com/file/d/1pF8ca8zqUap4bv1bYMPZlBpOuzOTWJr6
+# Download dataset
+gdowm https://drive.google.com/u/0/uc?id=1yIH7-O5qNuGdWWw4gDCCtehqST3ofY6r
+gdown https://drive.google.com/u/0/uc?id=1pF8ca8zqUap4bv1bYMPZlBpOuzOTWJr6
+# Download pre trained model
+gdown https://drive.google.com/u/0/uc?id=118EDwayV9Kqsf3ik5of7UErl0_WW73Qk
 
