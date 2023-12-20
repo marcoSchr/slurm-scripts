@@ -1,0 +1,93 @@
+slurmstepd: error: couldn't chdir to `/home/schroeder_e/slurm-scripts': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/home/schroeder_e/slurm-scripts': No such file or directory: going to /tmp instead
+2023-12-11 16:28:48.760431: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2023-12-11 16:28:48.781261: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2023-12-11 16:28:48.783082: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: thanos
+2023-12-11 16:28:48.784723: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: thanos
+2023-12-11 16:28:48.786562: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 535.86.10
+2023-12-11 16:28:48.788569: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 535.86.10
+2023-12-11 16:28:48.790128: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 535.86.10
+2023-12-11 16:29:48.443828: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2023-12-11 16:29:48.479578: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2023-12-11 16:29:48.482843: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xe3f2460 executing computations on platform Host. Devices:
+2023-12-11 16:29:48.484694: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+this is loadModuleAndPredict-----
+thia is trained_model_path :./trained_model/GGNN_GraphBinaryClassification__2023-02-01_05-36-00_f1 = 0.800_best.pkl
+Setting random seed 0.
+Word2Vec already exists.
+this is astJson: ../data/data/data/cve/badall_ast.jsonl 
+
+begin to split files...
+../data/data/data/cve/tem_badall/ast already exists
+../data/data/data/cve/tem_badall/cdfg already exists
+11111
+this is args.load_saved_model:./trained_model/GGNN_GraphBinaryClassification__2023-02-01_05-36-00_f1 = 0.800_best.pkl 
+this is data_path:../data/data/data/cve/tem_badall/ast,data_path_2:../data/data/data/cve/tem_badall/cdfg
+this is args.model:GGNN
+this is trained_model_file:./trained_model/GGNN_GraphBinaryClassification__2023-02-01_05-36-00_f1 = 0.800_best.pkl,load_weights_only:False 
+model_class,dataset_class:<class 'FUNDED.models.graph_binary_classification_task.GraphBinaryClassificationTask'>,<class 'FUNDED.data.jsonl_graph_property_dataset.JsonLGraphPropertyDataset'>
+default_task_model_hypers:{}
+Loading data from ../data/data/data/cve/tem_badall/ast.
+Restoring model weights from ./trained_model/GGNN_GraphBinaryClassification__2023-02-01_05-36-00_f1 = 0.800_best.pkl.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/recurrent_kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/bias:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/ScoringMLP_dense_layer_0/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/ScoringMLP_final_layer/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/TransformationMLP_dense_layer_0/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/TransformationMLP_final_layer/kernel:0 freshly initialised.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/ScoringMLP_dense_layer_0/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/ScoringMLP_final_layer/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/TransformationMLP_dense_layer_0/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/TransformationMLP_final_layer/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/bias:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/recurrent_kernel:0.
+this is trained_model_file:./trained_model/GGNN_GraphBinaryClassification__2023-02-01_05-36-00_f1 = 0.800_best.pkl,load_weights_only:False 
+model_class,dataset_class:<class 'FUNDED.models.graph_binary_classification_task.GraphBinaryClassificationTask'>,<class 'FUNDED.data.jsonl_graph_property_dataset.JsonLGraphPropertyDataset'>
+default_task_model_hypers:{}
+Loading data from ../data/data/data/cve/tem_badall/cdfg.
+Restoring model weights from ./trained_model/GGNN_GraphBinaryClassification__2023-02-01_05-36-00_f1 = 0.800_best.pkl.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_1/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_1/recurrent_kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_1/bias:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_1/WeightedSumGraphRepresentation/ScoringMLP_dense_layer_0/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_1/WeightedSumGraphRepresentation/ScoringMLP_final_layer/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_1/WeightedSumGraphRepresentation/TransformationMLP_dense_layer_0/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_1/WeightedSumGraphRepresentation/TransformationMLP_final_layer/kernel:0 freshly initialised.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/ScoringMLP_dense_layer_0/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/ScoringMLP_final_layer/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/TransformationMLP_dense_layer_0/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/TransformationMLP_final_layer/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/bias:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/recurrent_kernel:0.
+Restoring best model state from ./trained_model/GGNN_GraphBinaryClassification__2023-02-01_05-36-00_f1 = 0.800_best.pkl.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/recurrent_kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/bias:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/ScoringMLP_dense_layer_0/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/ScoringMLP_final_layer/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/TransformationMLP_dense_layer_0/kernel:0 freshly initialised.
+I: Weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange/WeightedSumGraphRepresentation/TransformationMLP_final_layer/kernel:0 freshly initialised.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/ScoringMLP_dense_layer_0/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/ScoringMLP_final_layer/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/TransformationMLP_dense_layer_0/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/WeightedSumGraphRepresentation/TransformationMLP_final_layer/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/bias:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/kernel:0.
+I: Model does not use saved weights for GGNN_GNN/Layer_2/Global_Exchange/graph_global_gru_exchange_2/recurrent_kernel:0.
+this is data_path:../data/data/data/cve/tem_badall/ast,data_path_2:../data/data/data/cve/tem_badall/cdfg 
+== Running on test dataset
+Loading data from ../data/data/data/cve/tem_badall/ast.
+task_outputs:[array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1,
+       1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+       0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       0, 1])]
+   Step:    0  |  Epoch graph avg. loss = 0.00270  |  Batch graph avg. loss = 0.00270  |  Steps per sec = 0.00000[Ktask_metric:|Accuracy = 0.870|precision = 1.000 | recall = 0.870 | f1 = 0.930 |
