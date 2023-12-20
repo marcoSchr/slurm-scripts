@@ -12,6 +12,8 @@
 #SBATCH --gres=gpu:1
 
 export HOME=/ukp-storage-1/schroeder_e/
+export PATH=/ukp-storage-1/schroeder_e/linevd/rats-2.4:$PATH
+export PATH=/ukp-storage-1/schroeder_e/linevd/GloVe/build:$PATH
 source /ukp-storage-1/schroeder_e/linevd/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/linevd/linevd

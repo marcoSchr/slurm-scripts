@@ -41,7 +41,7 @@ cd ../..
 # Build RATS
 tar -xzvf rats-2.4.tgz
 cd rats-2.4
-./configure
+./configure --with-expat-lib=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs --with-expat-include=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib
 make
 cd ..
 
@@ -60,6 +60,8 @@ pip install -r requirements.txt
 pip install https://data.pyg.org/whl/torch-1.9.0%2Bcu102/torch_scatter-2.0.9-cp37-cp37m-linux_x86_64.whl
 pip install torch==1.9.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu102
 pip install dgl-cu102 -f https://data.dgl.ai/wheels/repo.html
+# remove dgl 
+pip install dgl==0.9.1
 pip install --global-option=build_ext \
             --global-option="-I/ukp-storage-1/schroeder_e/graphviz/usr/include/" \
             --global-option="-L/ukp-storage-1/schroeder_e/graphviz/usr/lib/" \
