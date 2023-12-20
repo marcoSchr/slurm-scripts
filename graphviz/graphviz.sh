@@ -18,5 +18,5 @@ wget https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releas
 tar -xzvf graphviz-9.0.0.tar.gz
 cd graphviz-9.0.0
 ./autogen.sh
-./configure --prefix=/usr --enable-python3=yes --disable-python --enable-lefty
-make -j 40
+LD_RUN_PATH=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs ./configure --prefix=/usr --enable-python3=yes --enable-lefty
+LD_RUN_PATH=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs make -j 40
