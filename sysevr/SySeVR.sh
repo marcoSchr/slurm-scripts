@@ -11,12 +11,8 @@
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
-# python3 3.5
-# python 2.7
-# java 1.8
 # ant 1.9.14
 # joern 0.3.1
-# Tensorflow 1.6
 
 export PATH=/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin:$PATH
 mkdir -p /ukp-storage-1/schroeder_e/SySeVR/
@@ -34,3 +30,5 @@ pip install igraph
 pip install xlrd==1.1.0
 pip install gensim==3.4
 pip install pyyaml==3.12
+pip install tensorflow==1.6.0
+
