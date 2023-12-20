@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- [LLVM](../llvm/README.md)
+- [LLVM](../llvm)
 - Python 3.9
 
 ## Reproduction
