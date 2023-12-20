@@ -1,0 +1,16 @@
+slurmstepd: error: couldn't chdir to `/home/schroeder_e': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/home/schroeder_e': No such file or directory: going to /tmp instead
+Traceback (most recent call last):
+  File "/mnt/beegfs/work/schroeder_e/LineVul/bow_rf/rf_main.py", line 31, in <module>
+    rf.fit(X_train, y_train)
+  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/base.py", line 1151, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/ensemble/_forest.py", line 348, in fit
+    X, y = self._validate_data(
+  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/base.py", line 621, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/utils/validation.py", line 1147, in check_X_y
+    X = check_array(
+  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/utils/validation.py", line 753, in check_array
+    raise TypeError(
+TypeError: np.matrix is not supported. Please convert to a numpy array with np.asarray. For more information see: https://numpy.org/doc/stable/reference/generated/numpy.matrix.html

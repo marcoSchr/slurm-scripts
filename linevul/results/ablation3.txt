@@ -1,0 +1,16 @@
+slurmstepd: error: couldn't chdir to `/home/schroeder_e': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/home/schroeder_e': No such file or directory: going to /tmp instead
+Matplotlib created a temporary cache directory at /scratch/6418/matplotlib-fny5zodr because the default path (/home/schroeder_e/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+09/07/2023 16:21:35 - WARNING - __main__ -   device: cuda, n_gpu: 1
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+09/07/2023 16:21:38 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../data/big-vul_dataset/train.csv', output_dir='./saved_models', model_type='roberta', block_size=512, eval_data_file='../data/big-vul_dataset/val.csv', test_data_file='../data/big-vul_dataset/test.csv', model_name='WordlevelPretrainedBERT.bin', model_name_or_path='microsoft/codebert-base', config_name='', use_non_pretrained_model=False, tokenizer_name='microsoft/codebert-base', code_length=256, do_train=False, do_eval=False, do_test=True, evaluate_during_training=False, do_local_explanation=False, reasoning_method=None, train_batch_size=4, eval_batch_size=512, gradient_accumulation_steps=1, learning_rate=5e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, max_steps=-1, warmup_steps=0, seed=42, epochs=1, effort_at_top_k=0.2, top_k_recall_by_lines=0.01, top_k_recall_by_pred_prob=0.2, do_sorting_by_line_scores=False, do_sorting_by_pred_prob=False, top_k_constant=10, num_attention_heads=12, write_raw_preds=False, use_word_level_tokenizer=False, use_non_pretrained_tokenizer=False, n_gpu=1, device=device(type='cuda'))
+Traceback (most recent call last):
+  File "/mnt/beegfs/work/schroeder_e/LineVul/linevul/linevul_main.py", line 1247, in <module>
+    main()
+  File "/mnt/beegfs/work/schroeder_e/LineVul/linevul/linevul_main.py", line 1240, in main
+    model.load_state_dict(torch.load(output_dir, map_location=args.device))
+  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 2041, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Model:
+	Unexpected key(s) in state_dict: "roberta.embeddings.position_ids", "encoder.roberta.embeddings.position_ids". 
