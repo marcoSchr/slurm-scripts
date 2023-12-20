@@ -41,7 +41,7 @@ cd ../..
 # Build RATS
 tar -xzvf rats-2.4.tgz
 cd rats-2.4
-./configure --with-expat-lib=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs --with-expat-include=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib
+./configure --with-expat-lib=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs --with-expat-include=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib --prefix=/ukp-storage-1/schroeder_e/linevd/rats
 make
 cd ..
 
