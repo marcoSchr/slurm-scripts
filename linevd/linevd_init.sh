@@ -22,3 +22,4 @@ python -m zipfile -e MSR_data_cleaned.zip .
 
 wget https://github.com/joernio/joern/releases/download/v1.1.260/joern-cli.zip
 python -m zipfile -e joern-cli.zip .
+chmod -R +x joern-cli/
