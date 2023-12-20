@@ -14,6 +14,8 @@
 export HOME=/ukp-storage-1/schroeder_e/
 export PATH=/ukp-storage-1/schroeder_e/linevd/rats/bin:$PATH
 export PATH=/ukp-storage-1/schroeder_e/linevd/GloVe/build:$PATH
+# Fake to be in singularity to run all processed directly
+export SINGULARITY=true
 source /ukp-storage-1/schroeder_e/linevd/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/linevd/linevd
