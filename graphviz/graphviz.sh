@@ -14,9 +14,10 @@
 cd /ukp-storage-1/schroeder_e/
 mkdir -p graphviz
 cd graphviz
-wget https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/9.0.0/graphviz-9.0.0.tar.gz
+wget -nc https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/9.0.0/graphviz-9.0.0.tar.gz
 tar -xzvf graphviz-9.0.0.tar.gz
 cd graphviz-9.0.0
+export PKG_CONFIG_PATH=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs
 ./autogen.sh
-LD_RUN_PATH=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs ./configure --prefix=/usr --enable-python3=yes --enable-lefty
-LD_RUN_PATH=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs make -j 40
+./configure --prefix=/usr --enable-python3=yes --enable-lefty
+make -j 40
