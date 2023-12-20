@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-#SBATCH --job-name=linevul_rq1
-#SBATCH --output=/ukp-storage-1/schroeder_e/linevul_rq1.txt
+#SBATCH --job-name=linevul_reevaluate_original_vpp
+#SBATCH --output=/ukp-storage-1/schroeder_e/linevul_reevaluate_original_vpp.txt
 #SBATCH --mail-user=marco.schroeder@stud.tu-darmstadt.de
 #SBATCH --mail-type=ALL
 #SBATCH --account=tk-student
