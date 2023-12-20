@@ -25,4 +25,4 @@ python linevul_main.py \
   --eval_data_file=../data/big-vul_dataset/val.csv \
   --test_data_file=../data/big-vul_dataset/test.csv \
   --block_size 512 \
-  --eval_batch_size 512  2>&1 | tee ablation3.log
+  --eval_batch_size 256  2>&1 | tee ablation3.log
