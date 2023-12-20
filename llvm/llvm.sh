@@ -15,15 +15,15 @@ cd /ukp-storage-1/schroeder_e/
 mkdir -p llvm
 cd llvm
 # Install LLVM
-wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-project-10.0.0.tar.xz
-tar xvf llvm-project-10.0.0.tar.xz
+wget -nc https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-project-10.0.0.tar.xz
+tar xkf llvm-project-10.0.0.tar.xz
 mv llvm-project-10.0.0 llvm-project
 git clone https://github.com/michaelbrownuc/llap.git
 cp -R llap/src/* llvm-project/llvm/lib/Transforms/
 cd llvm-project/
 /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./llvm/ -B llvm-build -DCMAKE_BUILD_TYPE=Release
-cmake --build llvm-build -j 40
-cmake --install llvm-build --prefix /ukp-storage-1/schroeder_e/llvm/
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake --build llvm-build -j 40
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake --install llvm-build --prefix /ukp-storage-1/schroeder_e/llvm/
 LLVM_DIR=/ukp-storage-1/schroeder_e/llvm/llvm-project/llvm-build/lib/cmake/llvm/ /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./clang/ -B clang-build -DCMAKE_BUILD_TYPE=Release
-cmake --build clang-build -j 40
-cmake --install clang-build --prefix /ukp-storage-1/schroeder_e/llvm/
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake --build clang-build -j 40
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake --install clang-build --prefix /ukp-storage-1/schroeder_e/llvm/
