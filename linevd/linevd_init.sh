@@ -15,5 +15,12 @@ export HOME=/ukp-storage-1/schroeder_e/
 source /ukp-storage-1/schroeder_e/linevd/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/linevd/linevd
-chmod +x ./get_data.sh
-./get_data.sh
+cd storage/external
+
+gdown https://drive.google.com/uc\?id\=1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8X
+python -m zipfile -e MSR_data_cleaned.zip
+rm MSR_data_cleaned.zip
+
+wget https://github.com/joernio/joern/releases/download/v1.1.260/joern-cli.zip
+python -m zipfile -e joern-cli.zip
+rm joern-cli.zip
