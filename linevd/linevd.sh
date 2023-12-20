@@ -38,7 +38,7 @@ mkdir -p build
 cd build
 /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake ..
 /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake --build .
-cd ../..
+cd ../../..
 
 # Build RATS
 tar -xzvf rats-2.4.tgz
@@ -49,7 +49,7 @@ cd ..
 
 
 # Install joern
-
+chmod +x joern-install.sh
 printf 'Y\n/ukp-storage-1/schroeder_e/joern\nN\n\nN\n\n' | ./joern-install.sh --interactive
 
 
@@ -72,5 +72,6 @@ pip install nltk
 # Install specific version of ray, as current version is not compatible with linevd
 pip install ray[tune]==1.6.0
 pip install ray[default]==1.6.0
+pip install pytorch-lightning==1.8.6
 python -c 'import nltk; nltk.download("punkt")'
 cd ..
