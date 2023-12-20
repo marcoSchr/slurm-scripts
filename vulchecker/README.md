@@ -19,3 +19,12 @@ The data from one drive needs to be manually downloaded:
 - `mv juliet.zip juliet/`
 - `python -m zipfile -e juliet.zip juliet/`
 - `7za x Wild\ Labeled.7z`
+
+
+# Scripts
+
+| Script | purpose | note |
+| --- | --- | --- |
+| VulChecker.sh | Setup VulChecker venv |  |
+| VulChecker_prepareData.sh | Script to prepate the data provided by VulChecker| |
+| VulChecker_reproduce.sh | Script to reproduce VulChecker for different CWEs | not finished |
