@@ -34,3 +34,5 @@ python linevul_main.py \
   --max_grad_norm 1.0 \
   --evaluate_during_training \
   --seed 123456
+
+mv ./saved_models/model.bin ./saved_models/vpp.bin
