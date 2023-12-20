@@ -14,4 +14,5 @@
 source /ukp-storage-1/schroeder_e/LineVul/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/LineVul/bow_rf
-  python rf_main.py  2>&1 | tee rq1.log
+mkdir -p saved_models
+python rf_main.py  2>&1 | tee rq1.log
