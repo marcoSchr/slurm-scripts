@@ -12,15 +12,16 @@
 #SBATCH --gres=gpu:1
 
 mkdir -p /ukp-storage-1/schroeder_e/FUNDED/
-python3 -m venv /ukp-storage-1/schroeder_e/FUNDED/venv
+/ukp-storage-1/schroeder_e/python3.7/Python-3.7.17/python -m venv /ukp-storage-1/schroeder_e/FUNDED/venv
 source /ukp-storage-1/schroeder_e/FUNDED/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/FUNDED
 git clone https://github.com/HuantWang/FUNDED_NISL.git
 cd FUNDED_NISL
-# Replace tensorflow-gpu with tensorflow
-# This is done because -gpu is no longer supported
-sed -i 's/tensorflow-gpu==2.0.0/tensorflow/g' requirements.txt
 pip install -r requirements.txt
-cd FUNDED/cli
-CUDA_VISIBLE_DEVICES=2 python3 train.py GGNN GraphBinaryClassification ../data/data/CWE-77
+pip install nni
+cd /ukp-storage-1/schroeder_e/FUNDED
+pip install gdown
+gdowm https://drive.google.com/file/d/1yIH7-O5qNuGdWWw4gDCCtehqST3ofY6r
+gdown https://drive.google.com/file/d/1pF8ca8zqUap4bv1bYMPZlBpOuzOTWJr6
+
