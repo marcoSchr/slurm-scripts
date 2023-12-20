@@ -22,3 +22,4 @@ export EXPAT_CFLAGS='-I/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib'
 export EXPAT_LIBS='-L/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs -lexpat'
 ./configure --prefix=/usr --enable-python3=yes --enable-lefty
 make -j 40
+make DESTDIR="/ukp-storage-1/schroeder_e/graphviz/" install
