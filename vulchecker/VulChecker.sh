@@ -29,11 +29,7 @@ mv llvm-project-10.0.0 llvm-project
 git clone https://github.com/michaelbrownuc/llap.git
 cp -R llap/src/* llvm-project/llvm/lib/Transforms/
 cd llvm-project/
-cmake -S ./llvm/ -B llvm-build -DCMAKE_BUILD_TYPE=Release
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./llvm/ -B llvm-build -DCMAKE_BUILD_TYPE=Release
 make -C llvm-build -j 16
-# TODO: fix install folder
-# make -C llvm-build install 
-cmake -S ./clang/ -B clang-build -DCMAKE_BUILD_TYPE=Release
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./clang/ -B clang-build -DCMAKE_BUILD_TYPE=Release
 make -C clang-build -j 16
-# TODO: fix install folder
-# make -C clang-build install
