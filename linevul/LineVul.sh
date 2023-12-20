@@ -11,9 +11,12 @@
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
-source /ukp-storage-1/schroeder_e/LineVul/venv/bin/activate
 module load cuda/10.0
-cd /ukp-storage-1/schroeder_e/LineVul/
+cd /ukp-storage-1/schroeder_e/
+git clone https://github.com/anon-ai-research/LineVul.git
+cd LineVul
+python -m venv venv
+source /ukp-storage-1/schroeder_e/LineVul/venv/bin/activate
 # Install requirements
 pip install -r requirements.txt
 # Get data
