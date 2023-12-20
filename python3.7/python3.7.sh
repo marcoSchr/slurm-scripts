@@ -17,5 +17,5 @@ cd python3.7
 wget https://www.python.org/ftp/python/3.7.17/Python-3.7.17.tgz
 tar -xzvf Python-3.7.17.tgz
 cd Python-3.7.17
-./configure
-make -j 40
+LD_RUN_PATH="/ukp-storage-1/schroeder_e/sqlite/usr/lib" ./configure LDFLAGS="-L/ukp-storage-1/schroeder_e/sqlite/usr/lib" CPPFLAGS="-I/ukp-storage-1/schroeder_e/sqlite/usr/include"
+LD_RUN_PATH="/ukp-storage-1/schroeder_e/sqlite/usr/lib" make -j 40
