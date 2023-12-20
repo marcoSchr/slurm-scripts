@@ -11,15 +11,25 @@
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
+# python3 3.5
+# python 2.7
+# java 1.8
+# ant 1.9.14
+# joern 0.3.1
+# Tensorflow 1.6
+
 mkdir -p /ukp-storage-1/schroeder_e/SySeVR/
-python2 -m venv /ukp-storage-1/schroeder_e/SySeV/venv
+python3.6 -m venv /ukp-storage-1/schroeder_e/SySeV/venv
 source /ukp-storage-1/schroeder_e/SySeV/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/SySeV
 git clone https://github.com/SySeVR/SySeVR.git
 cd SySeVR
 cd /ukp-storage-1/schroeder_e/SySeVR/SySeVR/SySeVR_docker/docker_build/home/SySeVR/softdir/py2neo-py2neo-2.0 
-python2 setup.py install
+python setup.py install
 cd /ukp-storage-1/schroeder_e/SySeVR/SySeVR/SySeVR_docker/docker_build/home/SySeVR/softdir/python-joern-0.3.1
-python2 setup.py install
-# TODO: install python 3 and other dependencies
+python setup.py install
+pip install igraph
+pip install xlrd==1.1.0
+pip install gensim==3.4
+pip install pyyaml==3.12
