@@ -18,7 +18,7 @@
 # joern 0.3.1
 # Tensorflow 1.6
 
-export PATH=/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin;$PATH
+export PATH=/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin:$PATH
 mkdir -p /ukp-storage-1/schroeder_e/SySeVR/
 python3.6 -m venv /ukp-storage-1/schroeder_e/SySeV/venv
 source /ukp-storage-1/schroeder_e/SySeV/venv/bin/activate
