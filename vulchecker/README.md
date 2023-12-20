@@ -13,6 +13,7 @@ The data from one drive needs to be manually downloaded:
 - [Wild Label](https://bgu365-my.sharepoint.com/:u:/g/personal/yisroel_bgu_ac_il/EWtBXjeUMyZFoQyh-QudRKkBNQzLnDRLftgavWTOSALIMQ?e=WVbRiG)
 
 - The files are placed in `/ukp-storage-1/schroeder_e/VulChecker/data/`
+- `cd /ukp-storage-1/schroeder_e/VulChecker/data/`
 - `mkdir juliet`
 - `mv juliet.zip juliet/`
 - `python -m zipfile -e juliet.zip juliet/`
