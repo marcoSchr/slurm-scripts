@@ -21,6 +21,7 @@ cd /ukp-storage-1/schroeder_e/linevd
 git clone https://github.com/davidhin/linevd.git
 git clone https://github.com/stanfordnlp/GloVe.git
 wget https://github.com/ShiftLeftSecurity/joern/releases/latest/download/joern-install.sh
+mkdir -p cppcheck
 curl -L https://github.com/danmar/cppcheck/archive/refs/tags/2.5.tar.gz > cppcheck/cppcheck2.5.tar.gz
 curl -L https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/rough-auditing-tool-for-security/rats-2.4.tgz > rats-2.4.tgz
 
@@ -30,12 +31,13 @@ make
 cd ..
 
 # Build cppcheck
+cd cppcheck
 tar -xzvf cppcheck2.5.tar.gz
 cd cppcheck-2.5
 mkdir -p build
 cd build
-cmake ..
-cmake --build .
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake ..
+/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake --build .
 cd ../..
 
 # Build RATS

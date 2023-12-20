@@ -4,7 +4,8 @@
 
 - [Python 3.7](../python3.7)
 - [graphviz](../graphviz)
-- [expat[(../expat)
+- [expat](../expat)
+- [cmake](../cmake)
  
 # Scripts
 
