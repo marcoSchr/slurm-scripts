@@ -18,6 +18,7 @@ wget -nc https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-re
 tar -xzvf graphviz-9.0.0.tar.gz
 cd graphviz-9.0.0
 export PKG_CONFIG_PATH=/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs
-./autogen.sh
+export EXPAT_CFLAGS=' '
+export EXPAT_LIBS='-L/ukp-storage-1/schroeder_e/expat/expat-2.5.0/lib/.libs -lexpat'
 ./configure --prefix=/usr --enable-python3=yes --enable-lefty
 make -j 40
