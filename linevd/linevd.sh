@@ -50,6 +50,8 @@ cd linevd
 pip install torch==1.9.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu102
 pip install flawfinder
 pip install -r requirements.txt
+# Install torch_scatter as binary package, because we have no gcc7 to build it
+pip install https://data.pyg.org/whl/torch-1.9.0%2Bcu102/torch_scatter-2.0.9-cp37-cp37m-linux_x86_64.whl
 pip install dgl-cu102 -f https://data.dgl.ai/wheels/repo.html
 pip install pygraphviz
 pip install nltk
