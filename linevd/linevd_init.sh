@@ -18,9 +18,7 @@ cd /ukp-storage-1/schroeder_e/linevd/linevd
 cd storage/external
 
 gdown https://drive.google.com/uc\?id\=1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8X
-python -m zipfile -e MSR_data_cleaned.zip
-rm MSR_data_cleaned.zip
+python -m zipfile -e MSR_data_cleaned.zip .
 
 wget https://github.com/joernio/joern/releases/download/v1.1.260/joern-cli.zip
-python -m zipfile -e joern-cli.zip
-rm joern-cli.zip
+python -m zipfile -e joern-cli.zip .
