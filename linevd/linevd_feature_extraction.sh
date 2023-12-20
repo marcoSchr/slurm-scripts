@@ -19,4 +19,4 @@ export PYTHONPATH=/ukp-storage-1/schroeder_e/linevd/linevd:$PYTHONPATH
 
 python -c 'import sastvd.helpers.datasets as svdd;svdd.bigvul(False)'
 python sastvd/scripts/prepare.py
-python sastvd/scripts/getgraphs.py
+python sastvd/scripts/getgraphs.py 0
