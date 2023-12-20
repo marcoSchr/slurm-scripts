@@ -1,16 +1,18 @@
-slurmstepd: error: couldn't chdir to `/home/schroeder_e': No such file or directory: going to /tmp instead
-slurmstepd: error: couldn't chdir to `/home/schroeder_e': No such file or directory: going to /tmp instead
-Traceback (most recent call last):
-  File "/mnt/beegfs/work/schroeder_e/LineVul/bow_rf/rf_main.py", line 31, in <module>
-    rf.fit(X_train, y_train)
-  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/base.py", line 1151, in wrapper
-    return fit_method(estimator, *args, **kwargs)
-  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/ensemble/_forest.py", line 348, in fit
-    X, y = self._validate_data(
-  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/base.py", line 621, in _validate_data
-    X, y = check_X_y(X, y, **check_params)
-  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/utils/validation.py", line 1147, in check_X_y
-    X = check_array(
-  File "/mnt/beegfs/work/schroeder_e/LineVul/venv/lib64/python3.9/site-packages/sklearn/utils/validation.py", line 753, in check_array
-    raise TypeError(
-TypeError: np.matrix is not supported. Please convert to a numpy array with np.asarray. For more information see: https://numpy.org/doc/stable/reference/generated/numpy.matrix.html
+slurmstepd: error: couldn't chdir to `/home/schroeder_e/slurm-scripts/linevul': No such file or directory: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/home/schroeder_e/slurm-scripts/linevul': No such file or directory: going to /tmp instead
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:  9.1min
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed: 68.4min
+[Parallel(n_jobs=-1)]: Done 418 tasks      | elapsed: 201.6min
+[Parallel(n_jobs=-1)]: Done 768 tasks      | elapsed: 287.5min
+[Parallel(n_jobs=-1)]: Done 1000 out of 1000 | elapsed: 376.8min finished
+[Parallel(n_jobs=16)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=16)]: Done  18 tasks      | elapsed:    0.1s
+[Parallel(n_jobs=16)]: Done 168 tasks      | elapsed:    2.3s
+[Parallel(n_jobs=16)]: Done 418 tasks      | elapsed:    4.1s
+[Parallel(n_jobs=16)]: Done 768 tasks      | elapsed:    6.0s
+[Parallel(n_jobs=16)]: Done 1000 out of 1000 | elapsed:    7.7s finished
+F1 Score: 0.2429378531073446
+Precision: 0.47645429362880887
+Recall: 0.16303317535545023
+done
