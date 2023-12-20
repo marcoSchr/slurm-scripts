@@ -2,4 +2,4 @@
 
 ## Requitements
 
-- [cmake](../cmake/README.md)
+- [cmake](../cmake)
