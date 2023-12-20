@@ -15,4 +15,5 @@ export HOME=/ukp-storage-1/schroeder_e/
 source /ukp-storage-1/schroeder_e/linevd/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/linevd/linevd
+chmod +x ./get_data.sh
 ./get_data.sh
