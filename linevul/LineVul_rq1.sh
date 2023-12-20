@@ -14,5 +14,19 @@
 source /ukp-storage-1/schroeder_e/LineVul/venv/bin/activate
 module load cuda/10.0
 cd /ukp-storage-1/schroeder_e/LineVul/bow_rf
-mkdir -p saved_models
-python rf_main.py  2>&1 | tee rq1.log
+mkdir -p saved_modelss
+python rf_main.py
+cd ../linevul/
+python linevul_main.py \
+  --model_name=12heads_linevul_model.bin \
+  --output_dir=./saved_models \
+  --model_type=roberta \
+  --tokenizer_name=microsoft/codebert-base \
+  --model_name_or_path=microsoft/codebert-base \
+  --do_test \
+  --train_data_file=../data/big-vul_dataset/train.csv \
+  --eval_data_file=../data/big-vul_dataset/val.csv \
+  --test_data_file=../data/big-vul_dataset/test.csv \
+  --block_size 512 \
+  --eval_batch_size 256
+
