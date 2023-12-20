@@ -53,11 +53,10 @@ pip install -r requirements.txt
 # Install torch_scatter as binary package, because we have no gcc7 to build it
 pip install https://data.pyg.org/whl/torch-1.9.0%2Bcu102/torch_scatter-2.0.9-cp37-cp37m-linux_x86_64.whl
 pip install dgl-cu102 -f https://data.dgl.ai/wheels/repo.html
-pip install --use-pep517 \
-              --config-setting="--global-option=build_ext" \
-              --config-setting="--global-option="-I/ukp-storage-1/schroeder_e/graphviz/usr/include/" \
-              --config-setting="--global-option="-L/ukp-storage-1/schroeder_e/graphviz/usr/lib/" \
-              pygraphviz
+pip install --global-option=build_ext \
+            --global-option="-I/ukp-storage-1/schroeder_e/graphviz/usr/include/" \
+            --global-option="-L/ukp-storage-1/schroeder_e/graphviz/usr/lib/" \
+            pygraphviz==1.7
 pip install nltk
 python -c 'import nltk; nltk.download("punkt")'
 cd ..
