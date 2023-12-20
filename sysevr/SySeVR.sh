@@ -22,7 +22,7 @@ mkdir -p /ukp-storage-1/schroeder_e/SySeVR/
 python3.6 -m venv /ukp-storage-1/schroeder_e/SySeV/venv
 source /ukp-storage-1/schroeder_e/SySeV/venv/bin/activate
 module load cuda/10.0
-cd /ukp-storage-1/schroeder_e/SySeV
+cd /ukp-storage-1/schroeder_e/SySeVR
 git clone https://github.com/SySeVR/SySeVR.git
 cd SySeVR
 cd /ukp-storage-1/schroeder_e/SySeVR/SySeVR/SySeVR_docker/docker_build/home/SySeVR/softdir/py2neo-py2neo-2.0 
