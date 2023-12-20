@@ -31,5 +31,7 @@ cp -R llap/src/* llvm-project/llvm/lib/Transforms/
 cd llvm-project/
 /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./llvm/ -B llvm-build -DCMAKE_BUILD_TYPE=Release
 make -C llvm-build -j 16
-/ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./clang/ -B clang-build -DCMAKE_BUILD_TYPE=Release
+make -C llvm-build install
+LLVM_DIR=/ukp-storage-1/schroeder_e/llvm/llvm-project/llvm-build/ /ukp-storage-1/schroeder_e/cmake/cmake-3.27.7-linux-x86_64/bin/cmake -S ./clang/ -B clang-build -DCMAKE_BUILD_TYPE=Release
 make -C clang-build -j 16
+make -C clang-build install
