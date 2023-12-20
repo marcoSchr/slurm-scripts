@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH --job-name=linevul_setup
-#SBATCH --output=/ukp-storage-1/schroeder_e/res.txt
+#SBATCH --output=/ukp-storage-1/schroeder_e/linevul.txt
 #SBATCH --mail-user=marco.schroeder@stud.tu-darmstadt.de
 #SBATCH --mail-type=ALL
 #SBATCH --account=tk-student

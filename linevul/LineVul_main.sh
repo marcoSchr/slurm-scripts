@@ -1,13 +1,13 @@
 #!/bin/bash
 #
 #SBATCH --job-name=linevul_train
-#SBATCH --output=/ukp-storage-1/schroeder_e/res.txt
+#SBATCH --output=/ukp-storage-1/schroeder_e/linevul_main.txt
 #SBATCH --mail-user=marco.schroeder@stud.tu-darmstadt.de
 #SBATCH --mail-type=ALL
 #SBATCH --account=tk-student
 #SBATCH --partition=gpu-tk
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
+#SBATCH --cpus-per-task=16
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
