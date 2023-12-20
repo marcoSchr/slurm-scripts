@@ -17,5 +17,5 @@ cd expat
 wget https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.gz
 tar -xzvf expat-2.5.0.tar.gz
 cd expat-2.5.0
-cmake -B build
-make VERBOSE=1 -C build
+./configure
+make -j 40
